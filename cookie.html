@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>LeadPush | Demo</title>
+
+    <!--Meta For No Index-->
+    <meta name="robots" content="noindex, Nofollow, Noimageindex">
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Stylesheets -->
+
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body class="relative overflow-x-hidden  text-base antialiased bg-white dark:bg-dark-300 font-Inter">
+    <div class="toggle-button fixed right-5 max-lg:bottom-2.5 lg:top-1/3 z-[10000000000]">
+        <button id="theme-toggle" type="button"
+            class="text-paragraph dark:text-white focus:outline-none focus:ring-0 focus:ring-gray-200 w-10 h-10 border rounded-md border-paragraph/25 dark:border-borderColour-dark flex justify-center items-center">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 ml-1 -mt-[1px]" fill="currentColor"
+                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+        </button>
+    </div>
+
+    <header class="fixed left-0 top-8 z-[1000000000] duration-500  transition-all w-full bg-transparent"
+        id="mainnavigationBar">
+        <nav class="container flex  items-center">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="fonts/logo.svg" alt="logo" class="dark:hidden">
+                    <img src="fonts/logo-light.svg" alt="logo dark version" class="hidden dark:inline-block">
+                </a>
+            </div>
+            <ul class="nav-list hidden lg:flex lg:ml-7 xl:ml-15  [&amp;>*:not(:last-child)]:me-1">
+            </ul>
+            <ul class="flex items-center ml-auto  [&amp;>*:not(:last-child)]:me-2.5">
+                <li class="" id="open-btn" />
+                <li class="max-lg:hidden">
+                    <a href="request-demo.html" class="btn btn-navbar btn-sm">
+                        Request Demo
+                    </a>
+                </li>
+                <li class="max-lg:inline-block lg:hidden ">
+                    <button
+                        class="outline-none mobile-menu-button w-10 h-10 rounded-full bg-white dark:bg-dark-200 relative ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14" fill="none"
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                            <path
+                                d="M0 1C0 0.447715 0.447715 0 1 0H21C21.5523 0 22 0.447715 22 1C22 1.55228 21.5523 2 21 2H1C0.447716 2 0 1.55228 0 1Z"
+                                fill="" class="fill-paragraph dark:fill-white"></path>
+                            <path
+                                d="M8 7C8 6.44772 8.44772 6 9 6H21C21.5523 6 22 6.44772 22 7C22 7.55228 21.5523 8 21 8H9C8.44772 8 8 7.55228 8 7Z"
+                                fill="" class="fill-paragraph dark:fill-white"></path>
+                            <path
+                                d="M4 13C4 12.4477 4.44772 12 5 12H21C21.5523 12 22 12.4477 22 13C22 13.5523 21.5523 14 21 14H5C4.44772 14 4 13.5523 4 13Z"
+                                fill="" class="fill-paragraph dark:fill-white"></path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            <div class="mobile-menu max-lg:overflow-y-auto">
+                <button
+                    class=" outline-none navbar-toggle-close  w-10 h-10 rounded-full bg-white dark:bg-dark-200 absolute right-6 top-5 ">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+                <ul class="nav-list flex flex-col gap-5 w-full max-w-[500px] landscape:h-full">
+                    <li>
+                        <a href="contact.html" class="font-Inter flex items-center text-base font-medium leading-8 text-paragraph dark:text-white py-[5px] px-5 lg:px-4 xl:px-5 border rounded-large border-transparent hover:bg-white hover:border-borderColour dark:hover:bg-dark-200 
+            dark:hover:border-borderColour/10 duration-500 hover:duration-500 transition-colors  ">
+                            Contact Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="request-demo.html" class="btn btn-navbar btn-sm">
+                            Request Demo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero overflow-hidden relative max-lg:pt-150 pt-[200px] pb-[60px] h-full">
+        <div
+            class="absolute left-1/2 top-12 w-full h-[550px] -translate-x-1/2 bg-cover  bg-[url('../images/hero-gradient.png')] bg-no-repeat bg-center opacity-70 md:hidden -z-10">
+        </div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex max-md:flex-col -z-10 max-md:hidden">
+            <div
+                class="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/20 blur-[145px]">
+            </div>
+            <div
+                class="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/25 -ml-[170px] max-md:ml-0 blur-[145px]">
+            </div>
+            <div
+                class="max-1xl:w-[335px] max-1xl:h-[335px]  1xl:w-[442px] 1xl:h-[442px]  rounded-full bg-primary-200/20 -ml-[170px] max-md:ml-0 blur-[145px]">
+            </div>
+        </div>
+        <div class="container">
+            <div class="page-content inner boxed">
+                <div class="article w-richtext">
+                    <h2>IdeaPort Cookie Policy</h2>
+                    <p>We use cookies to help improve your experience of our website at <a
+                            href="https://coldpitch.email/">https://coldpitch.email</a>. This cookie policy is part of
+                        Cold
+                        Pitch's
+                        privacy policy. It covers the use of cookies between your device and our site.</p>
+                    <p>We also provide basic information on third-party services we may use, who may also use cookies as
+                        part
+                        of their service. This policy does not cover their cookies.</p>
+                    <p>If you don’t wish to accept cookies from us, you should instruct your browser to refuse cookies
+                        from <a href="https://coldpitch.email/">https://coldpitch.email</a>. In such a case, we may be
+                        unable to
+                        provide
+                        you with some of your desired content and services.</p>
+                    <h3>What is a cookie?</h3>
+                    <p>A cookie is a small piece of data that a website stores on your device when you visit. It
+                        typically
+                        contains information about the website itself, a unique identifier that allows the site to
+                        recognize
+                        your web browser when you return, additional data that serves the cookie’s purpose, and the
+                        lifespan of
+                        the cookie itself.</p>
+                    <p>Cookies are used to enable certain features (e.g. logging in), track site usage (e.g. analytics),
+                        store
+                        your user settings (e.g. time zone, notification preferences), and to personalize your content
+                        (e.g.
+                        advertising, language).</p>
+                    <p>Cookies set by the website you are visiting are usually referred to as first-party cookies. They
+                        typically only track your activity on that particular site.</p>
+                    <p>Cookies set by other sites and companies (i.e. third parties) are called third-party cookies They
+                        can
+                        be used to track you on other websites that use the same third-party service.</p>
+                    <h3>Types of cookies and how we use them</h3>
+                    <h4>Essential cookies</h4>
+                    <p>Essential cookies are crucial to your experience of a website, enabling core features like user
+                        logins,
+                        account management, shopping carts, and payment processing.</p>
+                    <p>We use essential cookies to enable certain functions on our website.</p>
+                    <h4>Performance cookies</h4>
+                    <p>Performance cookies track how you use a website during your visit. Typically, this information is
+                        anonymous and aggregated, with information tracked across all site users. They help companies
+                        understand
+                        visitor usage patterns, identify and diagnose problems or errors their users may encounter, and
+                        make
+                        better strategic decisions in improving their audience’s overall website experience. These
+                        cookies may
+                        be set by the website you’re visiting (first-party) or by third-party services. They do not
+                        collect
+                        personal information about you.</p>
+                    <p>We use performance cookies on our site.</p>
+                    <h4>Functionality cookies</h4>
+                    <p>Functionality cookies are used to collect information about your device and any settings you may
+                        configure on the website you’re visiting (like language and time zone settings). With this
+                        information,
+                        websites can provide you with customized, enhanced, or optimized content and services. These
+                        cookies may
+                        be set by the website you’re visiting (first-party) or by third-party services.</p>
+                    <p>We use functionality cookies for selected features on our site.</p>
+                    <h4>Targeting/advertising cookies</h4>
+                    <p>Targeting/advertising cookies help determine what promotional content is most relevant and
+                        appropriate
+                        to you and your interests. Websites may use them to deliver targeted advertising or limit the
+                        number of
+                        times you see an advertisement. This helps companies improve the effectiveness of their
+                        campaigns and
+                        the quality of content presented to you. These cookies may be set by the website you’re visiting
+                        (first-party) or by third-party services. Targeting/advertising cookies set by third-parties may
+                        be used
+                        to track you on other websites that use the same third-party service.</p>
+                    <p>We use targeting/advertising cookies on our site.</p>
+                    <h2>‍</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mark up for Script Section-->
+
+    <script src="js/fancybox.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/motionpath.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
